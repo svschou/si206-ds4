@@ -1,26 +1,26 @@
 # function to return the factorial of a number
 # Add comments
 def factorial(num):
-    ans = 1
-    if num < 0:
-        return None
+    ans = 1 # computing factorials will begin with 1
+    if num < 0: # will not compute negative number factorials
+        return None 
     elif num < 2:
-        return ans
+        return ans # 0 or 1 factorial will always be 1
     else:
-        for i in range(1, num + 1):
-            ans = ans * i
-        return ans
+        for i in range(1, num + 1): # loop through num times
+            ans = ans * i # multiply by the next number for each loop through
+        return ans # return computed value
 
 
 # function to check if the input year is a leap year or not
 def check_leap_year(year):
-    isLeap = False
-    if (year % 4) == 0:
-        if (year % 100) == 0:
-            if (year % 400) == 0:
-                isLeap = True
-        else:
-            isLeap = True
+    isLeap = False # default is NOT a leap year
+    if (year % 4) == 0: # if the year is divisible by 4
+        if (year % 100) == 0: # if the year is divisible by 100 AND
+            if (year % 400) == 0: # if the year is divisible by 400
+                isLeap = True # is a leap year
+        else: # if the year is divisible by 4 but not 100 or 400
+            isLeap = True # is a leap year
     return isLeap
 
 print("factorial(0): {}".format(factorial(0)))
