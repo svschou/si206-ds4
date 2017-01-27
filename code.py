@@ -44,4 +44,8 @@ class TestFactorial(unittest.TestCase):
     def test_factorial_neg_3(self):
         self.assertEqual(factorial(-3), None)
 
+class TestCheckLeapYear(unittest.TestCase):
+    def test_leap_2000(self):
+        self.assertEqual(check_leap_year(2000), True)
+
 unittest.main(verbosity=2) 
