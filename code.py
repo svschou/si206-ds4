@@ -41,5 +41,7 @@ class TestFactorial(unittest.TestCase):
         self.assertEqual(factorial(1), 1)
     def test_factorial_5(self):
         self.assertEqual(factorial(5), 120)
+    def test_factorial_neg_3(self):
+        self.assertEqual(factorial(-3), None)
 
 unittest.main(verbosity=2) 
